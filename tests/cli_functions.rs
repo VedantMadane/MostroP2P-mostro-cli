@@ -373,3 +373,15 @@ mod maintenance_commands {
         );
     }
 }
+
+// ── missing configuration guidance ─────────────────────────────────────────
+mod missing_config_guidance {
+    use clap::Parser;
+    use mostro_client::cli::Cli;
+
+    #[test]
+    fn missing_mostro_pubkey_message_content() {
+        let cli = Cli::try_parse_from(["mostro-cli", "listorders"]).unwrap();
+        assert!(cli.mostropubkey.is_none());
+    }
+}

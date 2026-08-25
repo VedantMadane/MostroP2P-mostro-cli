@@ -471,7 +471,11 @@ fn resolve_mostro_pubkey(cli: &Cli) -> Result<String> {
                 "MOSTRO_PUBKEY not set.\n\
              Provide it using one of the following methods:\n\
              1) --mostropubkey <npub>\n\
-             2) export MOSTRO_PUBKEY=<npub>"
+             2) export MOSTRO_PUBKEY=<npub>\n\n\
+             mostro-cli does not read any config file. To avoid re-exporting every\n\
+             time, put the exports in a file (e.g. ~/.config/mostro/env.sh) and\n\
+             `source` it before running the CLI.\n\
+             See https://github.com/MostroP2P/mostro-cli#configuration"
             )
         })
 }
@@ -487,7 +491,11 @@ fn resolve_relays() -> Result<String> {
             "RELAYS not set.\n\
              Provide it using one of the following methods:\n\
              1) --relays <relay[,relay...]>\n\
-             2) export RELAYS=<relay[,relay...]>"
+             2) export RELAYS=<relay[,relay...]>\n\n\
+             mostro-cli does not read any config file. To avoid re-exporting every\n\
+             time, put the exports in a file (e.g. ~/.config/mostro/env.sh) and\n\
+             `source` it before running the CLI.\n\
+             See https://github.com/MostroP2P/mostro-cli#configuration"
         )),
     }
 }

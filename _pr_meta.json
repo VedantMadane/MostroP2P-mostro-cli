@@ -1,0 +1,8 @@
+{
+  "repo": "MostroP2P/mostro-cli",
+  "number": 189,
+  "base": "main",
+  "head": "fix/issue-184",
+  "fork": "VedantMadane/MostroP2P-mostro-cli",
+  "title": "fix: clearer MOSTRO_PUBKEY setup error for first-time users"
+}

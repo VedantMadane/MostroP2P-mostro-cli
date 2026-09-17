@@ -468,14 +468,7 @@ fn resolve_mostro_pubkey(cli: &Cli) -> Result<String> {
         .or_else(|| std::env::var("MOSTRO_PUBKEY").ok())
         .ok_or_else(|| {
             anyhow::anyhow!(
-                "MOSTRO_PUBKEY not set.\n\
-             Provide it using one of the following methods:\n\
-             1) --mostropubkey <npub>\n\
-             2) export MOSTRO_PUBKEY=<npub>\n\n\
-             mostro-cli does not read any config file. To avoid re-exporting every\n\
-             time, put the exports in a file (e.g. ~/.config/mostro/env.sh) and\n\
-             `source` it before running the CLI.\n\
-             See https://github.com/MostroP2P/mostro-cli#configuration"
+                "MOSTRO_PUBKEY not set.\nProvide it using one of the following methods:\n1) --mostropubkey <npub>\n2) export MOSTRO_PUBKEY=<npub>\n\nmostro-cli does not read any config file. To avoid re-exporting every\ntime put the exports in a file (e.g. ~/.config/mostro/env.sh) and\n`source` it before running the CLI.\nSee https://github.com/MostroP2P/mostro-cli#configuration"
             )
         })
 }
